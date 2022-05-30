@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Greentopia</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Greentopia</string>
+    <string name="nav_header_subtitle">키워서 먹는다</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_settings">설정</string>
+    <string name="menu_refresh">새로고침</string>
+
+    <string name="menu_home">monitoring</string>
+    <string name="menu_gallery">settings</string>
+    <string name="menu_slideshow">3</string>
+</resources>

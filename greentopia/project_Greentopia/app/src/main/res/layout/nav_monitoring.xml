@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/n2"
+    android:orientation="vertical">
+
+    <androidx.gridlayout.widget.GridLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="50"
+        app:columnCount="2">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="10">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="식물"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_plant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="바질"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="10">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="날짜/시간"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="2022/~~"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="15">
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="기온"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_temp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="30"
+                android:progressBackgroundTint="#9E968A"
+                android:progressTint="#edbf41" />
+
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="C°"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="15">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="습도"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+
+            <ProgressBar
+                android:id="@+id/pb_hum"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="30"
+                android:progressBackgroundTint="#9E968A"
+                android:progressTint="#edbf41" />
+
+
+            <TextView
+                android:id="@+id/tv_hum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="%"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flyt_light"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/border_layout"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1.5">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="조도"
+                    android:textColor="#666666"
+                    android:textSize="22sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_light"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="40"
+                    android:progressBackgroundTint="#9E968A"
+                    android:progressTint="#edbf41" />
+
+
+                <TextView
+                    android:id="@+id/tv_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="lux"
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="15">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="잠금 여부"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_lock_on"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/lock" />
+
+            <TextView
+                android:id="@+id/tv_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="잠김"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="20"
+        app:columnCount="3"
+        app:rowCount="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/border_layout"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="물"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_waterTank1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="0.5"
+                android:progress="50"
+                android:rotation="270"
+                android:progressBackgroundTint="#9E968A"
+                />
+
+            <TextView
+                android:id="@+id/tv_waterTank1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="ml"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/border_layout"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="배양액"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_waterTank2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:progress="70"
+                android:rotation="270"
+                android:progressBackgroundTint="#9E968A"/>
+
+            <TextView
+                android:id="@+id/tv_waterTank2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="ml"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/border_layout"
+            android:orientation="vertical"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="진딧물 약"
+                android:textColor="#666666"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/pb_waterTank3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:progress="60"
+                android:rotation="270"
+                android:progressBackgroundTint="#9E968A"/>
+
+            <TextView
+                android:id="@+id/tv_waterTank3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="ml"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
